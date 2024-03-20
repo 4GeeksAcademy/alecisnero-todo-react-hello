@@ -1,24 +1,36 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import NewTask from "./NewTask";
+import logoToDo from "../../img/logo-tasks.png"
 
 //create your first component
 const Home = () => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="container">
+
+			{/* CARD HEADER */}
+			<div className="d-flex 
+			flex-column 
+			justify-content-center align-items-center">
+				<div className="d-flex 
+					justify-content-center 
+					align-items-center 
+					mb-5"
+						style={{
+							width: '100vw',
+							height: '80px',
+							backgroundColor: 'rgb(201, 201, 201)',
+							boxShadow: '0px 10px 50px 0.5px black'
+						}}>
+						<img className="edit-logo" src={logoToDo} alt="logo" />
+						<h1 className="edit-h1 mt-3 ms-2">To Do List</h1>
+					</div>
+				
+
+				{/* CARD BODY */}
+				<div>
+					<NewTask />
+				</div>
+			</div>
 		</div>
 	);
 };

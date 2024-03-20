@@ -10,3 +10,54 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    background: url("https://images.pexels.com/photos/7718707/pexels-photo-7718707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/ cover;
+    height: 100vh;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: .3s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+
+.input-box input:focus + label{
+    top: 15px;
+    font-size: .75em;   
+}
+
+.input-box input:focus{
+    border-bottom: 3px solid #28a745;
+}
+
+.input-box input{
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #28a745;
+    outline: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+
+.edit-h1{
+    font-family: 'Mogra';
+    font-size: 300%;
+    font-weight: bolder;
+}
+
+.edit-p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+
+.edit-logo{
+    width: 50px;
+    height: 50px;
+}
