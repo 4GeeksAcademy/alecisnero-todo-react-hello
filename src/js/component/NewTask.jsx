@@ -18,12 +18,6 @@ const NewTask = () => {
         }
     }
 
-    function completeTask() {
-        setActive(!active)
-
-        /* onClick={() => setAddTask(addTask.filter((task, indexCurrent) => { return index !== indexCurrent } */
-    }
-
 
     return (
         <div className='d-flex 
@@ -95,22 +89,14 @@ const NewTask = () => {
                             mb-2'
                                 style={{ backgroundColor: 'rgb(235, 235, 235)' }}>
                                 <p
+                                    id={index}
                                     key={index}
                                     style={{
-                                        overflowWrap: 'anywhere',
-                                        textDecoration: active ? 'line-through' : ''
-                                    }}>
+                                        overflowWrap: 'anywhere'}}>
                                     {item}
                                 </p>
                                 <div className='d-flex flex-row'>
-                                    <button className={`d-flex
-                                    justify-content-center
-                                    align-items-center
-                                    btn btn-${active ? 'success' : 'outline-success'}`}
-                                        onClick={completeTask}
-                                        style={{ fontSize: '20px' }}>
-                                        <IoCheckmarkCircleOutline />
-                                    </button>
+                                    
                                     <button className='d-flex
                                     justify-content-center
                                     align-items-center 
@@ -130,7 +116,6 @@ const NewTask = () => {
                     <p className="edit-p">{addTask.length} taks</p>
                 </div>
             </div>
-
         </div>
     )
 }
