@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import { IoAddCircleOutline } from "react-icons/io5";
-import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
 const NewTask = () => {
     const [inputNew, setInputNew] = useState("")
     const [addTask, setAddTask] = useState([])
-    const [active, setActive] = useState(false)
 
 
     const addItem = (e) => {
